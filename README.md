@@ -20,11 +20,17 @@ npm -v
 --------------------------------------------
 INSTALACIÓN
 
-1. Entra a la carpeta del backend en la terminal:
+Si el archivo o app se encuentra en el repositorio de github:
 
-cd app/backend
+1. Ejecuta este comando en tu terminal:
 
-2. Instala las dependencias:
+git clone https://github.com/sebastian2k26/form-analist.git
+
+2. Entra a la carpeta:
+
+cd form-analist/backend
+
+3. Instala las dependencias:
 
 npm install
 
