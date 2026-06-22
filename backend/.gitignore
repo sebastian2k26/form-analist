@@ -1,0 +1,15 @@
+# Dependencias instaladas (se regeneran con "npm install")
+node_modules/
+
+# Base de datos local generada en tiempo de ejecución
+data/practicantes.db
+
+# Archivos subidos por los practicantes (hojas de vida)
+uploads/*
+!uploads/.gitkeep
+
+# Variables de entorno con datos sensibles
+.env
+
+# Archivos de logs
+npm-debug.log*

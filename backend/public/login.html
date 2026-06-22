@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Analista</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1> Selección de Practicantes</h1>
+    <nav>
+      <a href="index.html">Registro</a>
+      <a href="login.html" class="activo">Panel de Analista</a>
+    </nav>
+  </header>
+
+  <main class="contenedor contenedor-angosto">
+    <section class="tarjeta">
+      <h2>Acceso de Analista</h2>
+      <p class="subtitulo">Ingresa tus credenciales para revisar a los practicantes.</p>
+
+      <form id="form-login" novalidate>
+        <div class="campo">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="analista" />
+        </div>
+
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" />
+        </div>
+
+        <button type="submit" class="boton-primario">Ingresar</button>
+      </form>
+
+      <div id="mensaje-resultado" class="mensaje oculto"></div>
+
+      <p class="hint">
+        Credenciales de prueba por defecto: <code>analista</code> / <code>analista123</code>
+        <br />(configurables en variables de entorno, ver README.md)
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Prueba Técnica</p>
+  </footer>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* ===========================================================
+   PANEL.CSS
+=========================================================== */
+
+/* cabecera del panel */
+.cabecera-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* filtros */
+.filtros {
+  display: flex;
+  gap: 8px;
+}
+
+.filtro {
+  border: 1px solid var(--color-borde);
+  background: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+.filtro.activo {
+  background: var(--color-primario);
+  color: white;
+  border-color: var(--color-primario);
+}
+
+/* lista de practicantes */
+.lista-practicantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cargando {
+  color: var(--color-texto-suave);
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* tarjeta de practicante */
+.tarjeta-practicante {
+  background: white;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 20px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.tarjeta-practicante:hover {
+  transform: translateY(-2px);
+}
+
+.tarjeta-practicante h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.tarjeta-practicante .meta {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+
+/* badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.badge.pendiente {
+  background: var(--color-pendiente-fondo);
+  color: var(--color-pendiente);
+}
+
+.badge.viable {
+  background: var(--color-exito-fondo);
+  color: var(--color-exito);
+}
+
+.badge.no_viable {
+  background: var(--color-peligro-fondo);
+  color: var(--color-peligro);
+}
+
+/* acciones */
+.acciones-tarjeta {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.acciones-tarjeta button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.btn-viable {
+  background: var(--color-exito-fondo);
+  color: var(--color-exito);
+}
+
+.btn-viable:hover {
+  background: var(--color-exito);
+  color: white;
+}
+
+.btn-no-viable {
+  background: var(--color-peligro-fondo);
+  color: var(--color-peligro);
+}
+
+.btn-no-viable:hover {
+  background: var(--color-peligro);
+  color: white;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal-contenido {
+  background: white;
+  border-radius: var(--radio);
+  padding: 28px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--color-texto-suave);
+}
+
+.modal-cuerpo dt {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  margin-top: 14px;
+}
+
+.modal-cuerpo dd {
+  margin: 2px 0 0 0;
+  font-size: 1rem;
+}

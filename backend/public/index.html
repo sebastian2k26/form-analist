@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Practicantes</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Selección de Practicantes</h1>
+    <nav>
+      <a href="index.html" class="activo">Registro</a>
+      <a href="login.html">Panel de Analista</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="tarjeta">
+      <h2>Formulario de Registro</h2>
+      <p class="subtitulo">Completa tus datos para postularte como practicante.</p>
+
+      <!--
+        IMPORTANTE: enctype="multipart/form-data" es OBLIGATORIO cuando
+        un formulario incluye un input type="file". Sin esto, el archivo
+        no se enviaría correctamente al servidor.
+      -->
+      <form id="form-registro" novalidate>
+
+        <div class="campo">
+          <label for="nombre_completo">Nombre completo *</label>
+          <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Ej: Ana María Pérez" />
+          <span class="error" id="error-nombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico *</label>
+          <input type="email" id="correo" name="correo" placeholder="Ej: ana.perez@correo.com" />
+          <span class="error" id="error-correo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="carrera">Carrera universitaria *</label>
+          <input type="text" id="carrera" name="carrera" placeholder="Ej: Ingeniería de Sistemas" />
+          <span class="error" id="error-carrera"></span>
+        </div>
+
+        <div class="campo">
+          <label for="semestre">Semestre actual *</label>
+          <input type="text" id="semestre" name="semestre" placeholder="Ej: 7mo semestre" />
+          <span class="error" id="error-semestre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="archivo_cv">Hoja de vida (PDF)</label>
+          <input type="file" id="archivo_cv" name="archivo_cv" accept="application/pdf" />
+          <small class="ayuda-archivo"> Solo archivos PDF. Tamaño máximo: 5 MB</small>
+          <span class="error" id="error-archivo"></span>
+        </div>
+
+        <button type="submit" class="boton-primario">Enviar registro</button>
+      </form>
+
+      <div id="mensaje-resultado" class="mensaje oculto"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Prueba Técnica</p>
+  </footer>
+
+  <script src="js/registro.js"></script>
+</body>
+</html>

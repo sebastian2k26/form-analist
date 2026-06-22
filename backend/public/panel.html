@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Analista</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Selección de Practicantes</h1>
+    <nav>
+      <a href="index.html">Registro</a>
+      <a href="panel.html" class="activo">Panel de Analista</a>
+      <button id="btn-logout" class="boton-secundario boton-chico">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="cabecera-panel">
+      <h2>Practicantes Registrados</h2>
+      <div class="filtros">
+        <button class="filtro activo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="pendiente">Pendientes</button>
+        <button class="filtro" data-filtro="viable">Viables</button>
+        <button class="filtro" data-filtro="no_viable">No viables</button>
+      </div>
+    </section>
+
+    <div id="mensaje-resultado" class="mensaje oculto"></div>
+
+    <section id="lista-practicantes" class="lista-practicantes">
+      <!-- Las tarjetas de practicantes se insertan aquí dinámicamente vía JS -->
+      <p class="cargando">Cargando practicantes...</p>
+    </section>
+  </main>
+
+  <!-- Modal de detalle del practicante -->
+  <div id="modal-detalle" class="modal oculto">
+    <div class="modal-contenido">
+      <button id="cerrar-modal" class="cerrar-modal">&times;</button>
+      <div id="modal-cuerpo"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Prueba Técnica</p>
+  </footer>
+
+  <script src="js/panel.js"></script>
+</body>
+</html>

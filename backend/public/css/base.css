@@ -1,0 +1,246 @@
+/* ===========================================================
+   BASE.CSS
+   Estilos globales compartidos
+=========================================================== */
+
+:root {
+  --color-primario: #2563eb;
+  --color-primario-oscuro: #1d4ed8;
+
+  --color-exito: #16a34a;
+  --color-exito-fondo: #dcfce7;
+
+  --color-peligro: #dc2626;
+  --color-peligro-fondo: #fee2e2;
+
+  --color-pendiente: #d97706;
+  --color-pendiente-fondo: #fef3c7;
+
+  --color-texto: #1f2937;
+  --color-texto-suave: #6b7280;
+
+  --color-borde: #e5e7eb;
+  --color-fondo: #f9fafb;
+
+  --radio: 10px;
+  --sombra: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+
+.topbar {
+  background: white;
+  border-bottom: 1px solid var(--color-borde);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.topbar h1 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  color: var(--color-texto-suave);
+  font-weight: 500;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.topbar nav a.activo,
+.topbar nav a:hover {
+  color: var(--color-primario);
+  border-bottom-color: var(--color-primario);
+}
+
+/* ================= LAYOUT ================= */
+
+.contenedor {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.contenedor-angosto {
+  max-width: 440px;
+}
+
+/* ================= TARJETAS ================= */
+
+.tarjeta {
+  background: white;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 32px;
+  border: 1px solid var(--color-borde);
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+}
+
+.subtitulo {
+  color: var(--color-texto-suave);
+  margin-top: -8px;
+  margin-bottom: 24px;
+}
+
+/* ================= FORMULARIOS ================= */
+
+.campo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="password"],
+.campo input[type="file"] {
+  padding: 10px 12px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.campo input.campo-invalido {
+  border-color: var(--color-peligro);
+}
+
+.error {
+  color: var(--color-peligro);
+  font-size: 0.82rem;
+  min-height: 16px;
+}
+
+/* ================= BOTONES ================= */
+
+.boton-primario {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.15s ease;
+}
+
+.boton-primario:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.boton-primario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.boton-secundario {
+  background: white;
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.boton-secundario:hover {
+  background: var(--color-fondo);
+}
+
+.boton-chico {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* ================= MENSAJES ================= */
+
+.mensaje {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.mensaje.exito {
+  background: var(--color-exito-fondo);
+  color: var(--color-exito);
+}
+
+.mensaje.error-msg {
+  background: var(--color-peligro-fondo);
+  color: var(--color-peligro);
+}
+
+.oculto {
+  display: none !important;
+}
+
+.hint {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+}
+
+/* RESPONSIVE GENERAL */
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
