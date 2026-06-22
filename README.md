@@ -35,10 +35,10 @@ EJECUCIÓN
 
 Para iniciar el servidor:
 
-npm start
+npm start o npm server.js
 
 Si todo está bien, verás un mensaje indicando que el servidor está corriendo en:
-http://localhost:3000
+http://localhost:3000 o http://127.0.0.1:3000/
 
 --------------------------------------------
 USO DE LA APLICACIÓN
