@@ -26,15 +26,17 @@ Si el archivo o app se encuentra en el repositorio de github:
 
 git clone https://github.com/sebastian2k26/form-analist.git
 
-2. Entra a la carpeta:
+2. Entra a la carpeta en tu terminal:
 
-cd form-analist/backend
+cd form-analis/backend
 
 3. Instala las dependencias:
 
 npm install
 
 Esto descargará todo lo necesario para que el proyecto funcione.
+
+En caso de no tener git instalado en el pc, puedes descargar el archivo zip, dando click en el boton verde "<> code" al entrar al repositorio, luego seguir los pasos desde el 2. o ejecutar cd form-analist-main/form-analist-main/backend.
 
 --------------------------------------------
 EJECUCIÓN
